@@ -29,18 +29,43 @@ font-family: 'Poppins', sans-serif;
     --accent: var(--purple);
 
     --animation-filter: brightness(1.2);
+
+    /* LIGHT THEME */
+
+    --page-bg: var(--white);
+    --text-color: var(--black);
+    --title-1: var(--accent);
+    --project-card-bg: var(--white);
+    --project-card-text: var(--black);
+
+    --box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.25);
+
+
+}
+
+.dark {
+    /* DARK THEME */
+    --page-bg: #252526;
+    --text-color: var(--white);
+    --title-1: var(--white);
+    --project-card-bg: var(--black);
+    --project-card-text: var(--white);
+    --box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.8);
 }
 
 /* BASICS */
 
 html,
 body {
-    font-family: "DM Sans", sans-serif;
-    letter-spacing: -0.5px;
-    color: var(--page-text);
-    height: 100%;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: -0.5px;
+
+    /* COLOR THEME */
+    background-color: var(--page-bg);
+    color: var(--text-color);
 }
 
 .container {
@@ -81,7 +106,9 @@ body {
     line-height: 24px;
     letter-spacing: 0.15px;
     transition: all 0.5s;
+    background-color: var(--white);
 }
+
 
 .btn-outline:hover {
     background-color: #f1f1f1;
@@ -125,7 +152,7 @@ body {
 
 .title-1 {
     text-align: center;
-    color: var(--accent);
+    color: var(--title-1);
     font-size: 60px;
     font-weight: 700;
     line-height: 130%;
@@ -133,7 +160,7 @@ body {
 }
 
 .title-2 {
-    color: var(--black);
+    color: var(--text-color);
     text-align: center;
     font-size: 40px;
     font-weight: 700;
@@ -274,11 +301,12 @@ body {
 }
 
 .project {
-    background-color: var(--white);
+    background-color: var(--project-card-bg);
     max-width: 370px;
     border-radius: 10px;
-    box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--box-shadow);
     transition: all 0.5s;
+
 }
 
 .project:hover {
@@ -290,7 +318,7 @@ body {
 }
 
 .project__title {
-    color: var(--page-text);
+    color: var(--project-card-text);
     font-size: 24px;
     font-weight: 700;
     line-height: 130%;
@@ -312,11 +340,11 @@ body {
     max-width: 100%;
     margin-bottom: 40px;
     border-radius: 10px;
-    box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--box-shadow);
 }
 
 .project-details__desc {
-    color: var(--page-text);
+    color: var(--text-color);
     text-align: center;
     font-size: 24px;
     font-weight: 700;
@@ -393,7 +421,7 @@ body {
         order: 0;
     }
 
-    .nav-row{
+    .nav-row {
         justify-content: space-between;
     }
 
