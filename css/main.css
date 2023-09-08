@@ -38,6 +38,9 @@ body {
     font-family: "DM Sans", sans-serif;
     letter-spacing: -0.5px;
     color: var(--page-text);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -91,6 +94,15 @@ body {
     font-weight: 700;
     line-height: 130%;
     margin-bottom: 60px;
+}
+
+.title-2 {
+    color: var(--black);
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 130%;
+    margin-bottom: 30px;
 }
 
 /* NAV */
@@ -274,6 +286,27 @@ body {
     margin-bottom: 30px;
 }
 
+/* SKILLS PAGE */
+
+.content-list {
+    max-width: 571px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+}
+
+.content-list__item p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.content-list__item a {
+    color: var(--accent);
+}
+
 /* FOOTER */
 
 .footer {
@@ -283,6 +316,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: auto;
 }
 
 .social {
